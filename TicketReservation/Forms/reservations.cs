@@ -37,6 +37,44 @@ namespace TicketReservation
             checkBox10.Appearance = System.Windows.Forms.Appearance.Button;
             checkBox11.Appearance = System.Windows.Forms.Appearance.Button;
             checkBox12.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox13.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox14.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox15.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox16.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox17.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox18.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox19.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox20.Appearance = System.Windows.Forms.Appearance.Button; 
+            checkBox21.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox22.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox23.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox24.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox25.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox26.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox27.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox28.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox29.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox30.Appearance = System.Windows.Forms.Appearance.Button; 
+            checkBox31.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox32.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox33.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox34.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox35.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox36.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox37.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox38.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox39.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox40.Appearance = System.Windows.Forms.Appearance.Button; 
+            checkBox41.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox42.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox43.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox44.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox45.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox46.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox47.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox48.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox49.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBox50.Appearance = System.Windows.Forms.Appearance.Button;
 
             //
             CheckReserved();
@@ -212,14 +250,14 @@ namespace TicketReservation
 
         public void AddSeat()
         {
-            MessageBox.Show("checked");
+            //MessageBox.Show("checked");
             count += 1;
             totalPrice += price;
         }
 
         public void RemoveSeat() 
         {
-            MessageBox.Show("unchecked");
+            //MessageBox.Show("unchecked");
             count -= 1;
             totalPrice -= price;
         }
@@ -250,6 +288,51 @@ namespace TicketReservation
                         case "A3": checkBox3.Checked = true; checkBox3.Enabled = false; break;
                         case "A4": checkBox4.Checked = true; checkBox4.Enabled = false; break;
                         case "A5": checkBox5.Checked = true; checkBox5.Enabled = false; break;
+                        case "A6": checkBox6.Checked = true; checkBox6.Enabled = false; break;
+                        case "A7": checkBox7.Checked = true; checkBox7.Enabled = false; break;
+                        case "A8": checkBox8.Checked = true; checkBox8.Enabled = false; break;
+                        case "A9": checkBox9.Checked = true; checkBox9.Enabled = false; break;
+                        case "A10": checkBox10.Checked = true; checkBox10.Enabled = false; break;
+                        case "B1": checkBox11.Checked = true; checkBox11.Enabled = false; break;
+                        case "B2": checkBox12.Checked = true; checkBox12.Enabled = false; break;
+                        case "B3": checkBox13.Checked = true; checkBox13.Enabled = false; break;
+                        case "B4": checkBox14.Checked = true; checkBox14.Enabled = false; break;
+                        case "B5": checkBox15.Checked = true; checkBox15.Enabled = false; break;
+                        case "B6": checkBox16.Checked = true; checkBox16.Enabled = false; break;
+                        case "B7": checkBox17.Checked = true; checkBox17.Enabled = false; break;
+                        case "B8": checkBox18.Checked = true; checkBox18.Enabled = false; break;
+                        case "B9": checkBox19.Checked = true; checkBox19.Enabled = false; break;
+                        case "B10": checkBox20.Checked = true; checkBox20.Enabled = false; break;
+                        case "C1": checkBox21.Checked = true; checkBox21.Enabled = false; break;
+                        case "C2": checkBox22.Checked = true; checkBox22.Enabled = false; break;
+                        case "C3": checkBox23.Checked = true; checkBox23.Enabled = false; break;
+                        case "C4": checkBox24.Checked = true; checkBox24.Enabled = false; break;
+                        case "C5": checkBox25.Checked = true; checkBox25.Enabled = false; break;
+                        case "C6": checkBox26.Checked = true; checkBox26.Enabled = false; break;
+                        case "C7": checkBox27.Checked = true; checkBox27.Enabled = false; break;
+                        case "C8": checkBox28.Checked = true; checkBox28.Enabled = false; break;
+                        case "C9": checkBox29.Checked = true; checkBox29.Enabled = false; break;
+                        case "C10": checkBox30.Checked = true; checkBox30.Enabled = false; break;
+                        case "D1": checkBox31.Checked = true; checkBox31.Enabled = false; break;
+                        case "D2": checkBox32.Checked = true; checkBox32.Enabled = false; break;
+                        case "D3": checkBox33.Checked = true; checkBox33.Enabled = false; break;
+                        case "D4": checkBox34.Checked = true; checkBox34.Enabled = false; break;
+                        case "D5": checkBox35.Checked = true; checkBox35.Enabled = false; break;
+                        case "D6": checkBox36.Checked = true; checkBox36.Enabled = false; break;
+                        case "D7": checkBox37.Checked = true; checkBox37.Enabled = false; break;
+                        case "D8": checkBox38.Checked = true; checkBox38.Enabled = false; break;
+                        case "D9": checkBox39.Checked = true; checkBox39.Enabled = false; break;
+                        case "D10": checkBox40.Checked = true; checkBox40.Enabled = false; break;
+                        case "E1": checkBox41.Checked = true; checkBox41.Enabled = false; break;
+                        case "E2": checkBox42.Checked = true; checkBox42.Enabled = false; break;
+                        case "E3": checkBox43.Checked = true; checkBox43.Enabled = false; break;
+                        case "E4": checkBox44.Checked = true; checkBox44.Enabled = false; break;
+                        case "E5": checkBox45.Checked = true; checkBox45.Enabled = false; break;
+                        case "E6": checkBox46.Checked = true; checkBox46.Enabled = false; break;
+                        case "E7": checkBox47.Checked = true; checkBox47.Enabled = false; break;
+                        case "E8": checkBox48.Checked = true; checkBox48.Enabled = false; break;
+                        case "E9": checkBox49.Checked = true; checkBox49.Enabled = false; break;
+                        case "E10": checkBox50.Checked = true; checkBox50.Enabled = false; break;
                     }
                 }
         }
@@ -261,25 +344,25 @@ namespace TicketReservation
                 systemDB.InsertSeat("A1", movies.mappingID);
                 checkBox1.Enabled = false;
             }
-            if (checkBox1.Checked && checkBox1.Enabled == true)
+            if (checkBox2.Checked && checkBox2.Enabled == true)
             {
                 systemDB.InsertSeat("A2", movies.mappingID);
-                checkBox1.Enabled = false;
+                checkBox2.Enabled = false;
             }
-            if (checkBox1.Checked && checkBox1.Enabled == true)
+            if (checkBox3.Checked && checkBox3.Enabled == true)
             {
                 systemDB.InsertSeat("A3", movies.mappingID);
-                checkBox1.Enabled = false;
+                checkBox3.Enabled = false;
             }
-            if (checkBox1.Checked && checkBox1.Enabled == true)
+            if (checkBox4.Checked && checkBox4.Enabled == true)
             {
                 systemDB.InsertSeat("A4", movies.mappingID);
-                checkBox1.Enabled = false;
+                checkBox4.Enabled = false;
             }
-            if (checkBox1.Checked && checkBox1.Enabled == true)
+            if (checkBox5.Checked && checkBox5.Enabled == true)
             {
                 systemDB.InsertSeat("A5", movies.mappingID);
-                checkBox1.Enabled = false;
+                checkBox5.Enabled = false;
             }
         }
     }
