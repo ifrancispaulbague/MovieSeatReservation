@@ -13,12 +13,49 @@ namespace TicketReservation
     public partial class screen : Form
     {
         public static string price = "", time = "", title = "", cinema = "", seat = "";
-
+        string[] cinemaMovieID = { "C10001", "C20001", "C30001" };
+        DatabaseSample systemDB;
         public screen()
         {
             InitializeComponent();
+            systemDB = new DatabaseSample();
+            SetMovie1();
+            SetMovie2();
+            SetMovie3();
+            
         }
+        public void SetMovie1()
+        {
+            systemDB.SelectMovieTitle(cinemaMovieID[0]);
+            label5.Text = systemDB.GetMoviePrice().ToString();
+            label7.Text = systemDB.GetMovieTitle();
+            button1.Image = systemDB.GetMovieImage();
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(systemDB.GetMovieSched());
+            comboBox1.SelectedIndex = 0;
+        }
+        public void SetMovie2()
+        {
+            systemDB.SelectMovieTitle(cinemaMovieID[1]);
+            label17.Text = systemDB.GetMoviePrice().ToString();
+            label19.Text = systemDB.GetMovieTitle();
+            button2.Image = systemDB.GetMovieImage();
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(systemDB.GetMovieSched());
+            comboBox2.SelectedIndex = 0;
 
+        }
+        public void SetMovie3()
+        {
+            systemDB.SelectMovieTitle(cinemaMovieID[2]);
+            label11.Text = systemDB.GetMoviePrice().ToString();
+            label9.Text = systemDB.GetMovieTitle();
+            button3.Image = systemDB.GetMovieImage();
+            comboBox3.Items.Clear();
+            comboBox3.Items.AddRange(systemDB.GetMovieSched());
+            comboBox3.SelectedIndex = 0;
+
+        }
         private void screen_Load(object sender, EventArgs e)
         {
             button1.BackgroundImageLayout = ImageLayout.Stretch;
@@ -26,8 +63,9 @@ namespace TicketReservation
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             price   = label5.Text;
-            time    = label6.Text;
+            time    = comboBox1.SelectedItem.ToString();
             title   = label7.Text;
             cinema  = label8.Text;
             seat    = label25.Text;
@@ -40,8 +78,8 @@ namespace TicketReservation
         private void button2_Click(object sender, EventArgs e)
         {
             price   = label17.Text;
-            time    = label18.Text;
-            title   = label9.Text;
+            time    = comboBox2.SelectedItem.ToString();
+            title   = label19.Text;
             cinema  = label20.Text;
             seat    = label27.Text;
 
@@ -53,7 +91,7 @@ namespace TicketReservation
         private void button3_Click(object sender, EventArgs e)
         {
             price   = label9.Text;
-            time    = label10.Text;
+            time    = comboBox3.SelectedItem.ToString();
             title   = label1.Text;
             cinema  = label12.Text;
             seat    = label29.Text;
@@ -61,6 +99,21 @@ namespace TicketReservation
             this.Hide();
             movies frm2 = new movies();
             frm2.Show(); 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            time = comboBox1.SelectedItem.ToString();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            time = comboBox2.SelectedItem.ToString();
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            time = comboBox3.SelectedItem.ToString();
         }
     }
 }
