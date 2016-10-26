@@ -480,6 +480,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "movies";
             this.Text = "Movies";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.movies_FormClosed);
             this.Load += new System.EventHandler(this.movies_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

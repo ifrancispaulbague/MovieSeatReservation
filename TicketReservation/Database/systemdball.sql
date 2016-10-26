@@ -86,11 +86,11 @@ CREATE TABLE `reservations` (
   `reservation_id` int(11) NOT NULL AUTO_INCREMENT,
   `seat_id` varchar(3) NOT NULL,
   `reservation_status` tinyint(4) DEFAULT NULL,
-  `mapping_id` int(11) NOT NULL,
-  PRIMARY KEY (`reservation_id`,`seat_id`,`mapping_id`),
-  KEY `mapping_id_idx` (`mapping_id`),
-  CONSTRAINT `mapping_id` FOREIGN KEY (`mapping_id`) REFERENCES `ms_mapping` (`mapping_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `r_mapping_id` int(11) NOT NULL,
+  PRIMARY KEY (`reservation_id`,`seat_id`,`r_mapping_id`),
+  KEY `mapping_id_idx` (`r_mapping_id`),
+  CONSTRAINT `r_mapping_id` FOREIGN KEY (`r_mapping_id`) REFERENCES `ms_mapping` (`mapping_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +99,6 @@ CREATE TABLE `reservations` (
 
 LOCK TABLES `reservations` WRITE;
 /*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
-INSERT INTO `reservations` VALUES (3,'A1',1,3);
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,6 +126,35 @@ LOCK TABLES `screening` WRITE;
 INSERT INTO `screening` VALUES (1,'11/01/2016 10:30-12:30'),(2,'11/01/2016 13:00-15:00');
 /*!40000 ALTER TABLE `screening` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `transaction`
+--
+
+DROP TABLE IF EXISTS `transaction`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `transaction` (
+  `transaction_id` int(11) NOT NULL AUTO_INCREMENT,
+  `transaction_amount` decimal(10,2) DEFAULT NULL,
+  `transaction_seats` int(10) DEFAULT NULL,
+  `transaction_date` datetime DEFAULT NULL,
+  `t_mapping_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`transaction_id`),
+  KEY `mapping_id_idx` (`t_mapping_id`),
+  KEY `t_mapping_id_idx` (`t_mapping_id`),
+  CONSTRAINT `t_mapping_id` FOREIGN KEY (`t_mapping_id`) REFERENCES `ms_mapping` (`mapping_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `transaction`
+--
+
+LOCK TABLES `transaction` WRITE;
+/*!40000 ALTER TABLE `transaction` DISABLE KEYS */;
+/*!40000 ALTER TABLE `transaction` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -137,4 +165,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-26 16:39:29
+-- Dump completed on 2016-10-26 21:36:58

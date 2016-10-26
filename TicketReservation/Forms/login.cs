@@ -42,5 +42,10 @@ namespace TicketReservation
                 MessageBox.Show("Invalid User Account");
             }
         }
+
+        private void login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.formHome.Show();
+        }
     }
 }
