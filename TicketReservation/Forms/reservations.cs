@@ -364,6 +364,31 @@ namespace TicketReservation
                 systemDB.InsertSeat("A5", movies.mappingID);
                 checkBox5.Enabled = false;
             }
+            if (checkBox6.Checked && checkBox6.Enabled == true)
+            {
+                systemDB.InsertSeat("A6", movies.mappingID);
+                checkBox6.Enabled = false;
+            }
+            if (checkBox7.Checked && checkBox7.Enabled == true)
+            {
+                systemDB.InsertSeat("A7", movies.mappingID);
+                checkBox7.Enabled = false;
+            }
+            if (checkBox8.Checked && checkBox8.Enabled == true)
+            {
+                systemDB.InsertSeat("A8", movies.mappingID);
+                checkBox8.Enabled = false;
+            }
+            if (checkBox9.Checked && checkBox9.Enabled == true)
+            {
+                systemDB.InsertSeat("A9", movies.mappingID);
+                checkBox9.Enabled = false;
+            }
+            if (checkBox10.Checked && checkBox10.Enabled == true)
+            {
+                systemDB.InsertSeat("A10", movies.mappingID);
+                checkBox5.Enabled = false;
+            }
         }
     }
 }
