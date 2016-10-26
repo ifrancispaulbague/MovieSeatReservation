@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(screen));
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -64,6 +65,9 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -101,6 +105,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.label5);
@@ -185,9 +190,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 71);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Time";
+            this.label4.Text = "Schedule";
             // 
             // label1
             // 
@@ -209,6 +214,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboBox3);
             this.groupBox2.Controls.Add(this.label29);
             this.groupBox2.Controls.Add(this.label30);
             this.groupBox2.Controls.Add(this.label9);
@@ -317,6 +323,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.comboBox2);
             this.groupBox3.Controls.Add(this.label27);
             this.groupBox3.Controls.Add(this.label28);
             this.groupBox3.Controls.Add(this.label17);
@@ -423,6 +430,42 @@
             this.label24.TabIndex = 5;
             this.label24.Text = "Cinema";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Schedule1",
+            "Schedule2"});
+            this.comboBox1.Location = new System.Drawing.Point(79, 63);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(141, 21);
+            this.comboBox1.TabIndex = 19;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Schedule1",
+            "Schedule2"});
+            this.comboBox2.Location = new System.Drawing.Point(79, 63);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(141, 21);
+            this.comboBox2.TabIndex = 20;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Schedule1",
+            "Schedule2"});
+            this.comboBox3.Location = new System.Drawing.Point(79, 63);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(141, 21);
+            this.comboBox3.TabIndex = 21;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
             // screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,8 +477,9 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "screen";
-            this.Text = "screen";
+            this.Text = "Movies";
             this.Load += new System.EventHandler(this.screen_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -485,5 +529,8 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

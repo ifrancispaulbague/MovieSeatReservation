@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(movies));
             this.btnCancel = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -70,9 +71,9 @@
             // btnCancel
             // 
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCancel.Location = new System.Drawing.Point(289, 285);
+            this.btnCancel.Location = new System.Drawing.Point(292, 285);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(85, 37);
+            this.btnCancel.Size = new System.Drawing.Size(122, 37);
             this.btnCancel.TabIndex = 0;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -82,7 +83,7 @@
             // 
             this.button2.Enabled = false;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Location = new System.Drawing.Point(12, 257);
+            this.button2.Location = new System.Drawing.Point(12, 49);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(270, 65);
             this.button2.TabIndex = 1;
@@ -91,7 +92,7 @@
             // 
             // checkBox1
             // 
-            this.checkBox1.Location = new System.Drawing.Point(12, 83);
+            this.checkBox1.Location = new System.Drawing.Point(12, 188);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(40, 24);
             this.checkBox1.TabIndex = 6;
@@ -101,7 +102,7 @@
             // 
             // checkBox2
             // 
-            this.checkBox2.Location = new System.Drawing.Point(58, 83);
+            this.checkBox2.Location = new System.Drawing.Point(58, 188);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(40, 24);
             this.checkBox2.TabIndex = 7;
@@ -111,7 +112,7 @@
             // 
             // checkBox3
             // 
-            this.checkBox3.Location = new System.Drawing.Point(104, 83);
+            this.checkBox3.Location = new System.Drawing.Point(104, 188);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(40, 24);
             this.checkBox3.TabIndex = 8;
@@ -121,7 +122,7 @@
             // 
             // checkBox4
             // 
-            this.checkBox4.Location = new System.Drawing.Point(150, 83);
+            this.checkBox4.Location = new System.Drawing.Point(150, 188);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(40, 24);
             this.checkBox4.TabIndex = 9;
@@ -131,7 +132,7 @@
             // 
             // checkBox5
             // 
-            this.checkBox5.Location = new System.Drawing.Point(196, 83);
+            this.checkBox5.Location = new System.Drawing.Point(196, 188);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(40, 24);
             this.checkBox5.TabIndex = 10;
@@ -153,7 +154,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(292, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 140);
+            this.groupBox1.Size = new System.Drawing.Size(290, 140);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
@@ -226,9 +227,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(7, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Time";
+            this.label2.Text = "Schedule";
             // 
             // lblTitle
             // 
@@ -269,16 +270,16 @@
             // btnReserve
             // 
             this.btnReserve.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnReserve.Location = new System.Drawing.Point(407, 285);
+            this.btnReserve.Location = new System.Drawing.Point(460, 285);
             this.btnReserve.Name = "btnReserve";
-            this.btnReserve.Size = new System.Drawing.Size(85, 37);
+            this.btnReserve.Size = new System.Drawing.Size(122, 37);
             this.btnReserve.TabIndex = 18;
             this.btnReserve.Text = "Submit";
             this.btnReserve.UseVisualStyleBackColor = true;
             // 
             // checkBox6
             // 
-            this.checkBox6.Location = new System.Drawing.Point(242, 83);
+            this.checkBox6.Location = new System.Drawing.Point(242, 188);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(40, 24);
             this.checkBox6.TabIndex = 12;
@@ -288,7 +289,7 @@
             // 
             // checkBox7
             // 
-            this.checkBox7.Location = new System.Drawing.Point(12, 117);
+            this.checkBox7.Location = new System.Drawing.Point(12, 222);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(40, 24);
             this.checkBox7.TabIndex = 18;
@@ -298,7 +299,7 @@
             // 
             // checkBox8
             // 
-            this.checkBox8.Location = new System.Drawing.Point(58, 117);
+            this.checkBox8.Location = new System.Drawing.Point(58, 222);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(40, 24);
             this.checkBox8.TabIndex = 17;
@@ -308,7 +309,7 @@
             // 
             // checkBox9
             // 
-            this.checkBox9.Location = new System.Drawing.Point(104, 117);
+            this.checkBox9.Location = new System.Drawing.Point(104, 222);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(40, 24);
             this.checkBox9.TabIndex = 16;
@@ -318,7 +319,7 @@
             // 
             // checkBox10
             // 
-            this.checkBox10.Location = new System.Drawing.Point(150, 117);
+            this.checkBox10.Location = new System.Drawing.Point(150, 222);
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(40, 24);
             this.checkBox10.TabIndex = 15;
@@ -328,7 +329,7 @@
             // 
             // checkBox11
             // 
-            this.checkBox11.Location = new System.Drawing.Point(196, 117);
+            this.checkBox11.Location = new System.Drawing.Point(196, 222);
             this.checkBox11.Name = "checkBox11";
             this.checkBox11.Size = new System.Drawing.Size(40, 24);
             this.checkBox11.TabIndex = 14;
@@ -338,7 +339,7 @@
             // 
             // checkBox12
             // 
-            this.checkBox12.Location = new System.Drawing.Point(242, 117);
+            this.checkBox12.Location = new System.Drawing.Point(242, 222);
             this.checkBox12.Name = "checkBox12";
             this.checkBox12.Size = new System.Drawing.Size(40, 24);
             this.checkBox12.TabIndex = 13;
@@ -350,7 +351,7 @@
             // 
             this.tboxPayAmount.Location = new System.Drawing.Point(94, 19);
             this.tboxPayAmount.Name = "tboxPayAmount";
-            this.tboxPayAmount.Size = new System.Drawing.Size(100, 20);
+            this.tboxPayAmount.Size = new System.Drawing.Size(181, 20);
             this.tboxPayAmount.TabIndex = 20;
             this.tboxPayAmount.Leave += new System.EventHandler(this.tboxPayAmountLeave);
             // 
@@ -382,7 +383,7 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(292, 158);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 121);
+            this.groupBox2.Size = new System.Drawing.Size(290, 121);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Payment";
@@ -392,7 +393,7 @@
             this.tboxChange.Enabled = false;
             this.tboxChange.Location = new System.Drawing.Point(94, 72);
             this.tboxChange.Name = "tboxChange";
-            this.tboxChange.Size = new System.Drawing.Size(100, 20);
+            this.tboxChange.Size = new System.Drawing.Size(181, 20);
             this.tboxChange.TabIndex = 25;
             // 
             // label9
@@ -409,14 +410,14 @@
             this.tboxTotalAmount.Enabled = false;
             this.tboxTotalAmount.Location = new System.Drawing.Point(94, 46);
             this.tboxTotalAmount.Name = "tboxTotalAmount";
-            this.tboxTotalAmount.Size = new System.Drawing.Size(100, 20);
+            this.tboxTotalAmount.Size = new System.Drawing.Size(181, 20);
             this.tboxTotalAmount.TabIndex = 23;
             // 
             // movies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 334);
+            this.ClientSize = new System.Drawing.Size(594, 334);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnReserve);
             this.Controls.Add(this.checkBox7);
@@ -436,8 +437,9 @@
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "movies";
-            this.Text = "movies";
+            this.Text = "Reservations";
             this.Load += new System.EventHandler(this.movies_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

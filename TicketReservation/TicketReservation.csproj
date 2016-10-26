@@ -103,6 +103,7 @@
     <EmbeddedResource Include="Forms\screen.resx">
       <DependentUpon>screen.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Database\systemdbdata1" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -156,6 +157,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\systemdb.sql" />
+    <Content Include="Database\systemdball.sql" />
+    <Content Include="Database\systemdbstruct1.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

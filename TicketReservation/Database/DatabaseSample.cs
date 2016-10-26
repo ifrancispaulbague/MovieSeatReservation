@@ -17,6 +17,7 @@ namespace TicketReservation
         MySqlCommand cmd;
         MySqlDataReader rdr;
         string connectionString, movieTitle;
+        string[] movieSched;
         decimal moviePrice;
         Image movieImage;
 
@@ -30,8 +31,7 @@ namespace TicketReservation
                 cnn.Open();
                 MessageBox.Show("Connection Successful!");
                 cmd = new MySqlCommand();
-                cmd.Connection = cnn;
-
+                
             }
             catch (MySqlException ex)
             {
@@ -63,29 +63,46 @@ namespace TicketReservation
             string query = String.Format("SELECT * FROM movies WHERE movies_id = '{0}'", movieID);
             cmd.Connection = cnn;
             cmd.CommandText = query;
-            try
+            
+            rdr = cmd.ExecuteReader();
+            while (rdr.Read())
             {
-                rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                {
-                    movieTitle = rdr.GetString(1);
-                    moviePrice = rdr.GetDecimal(3);
-                    UInt32 size = rdr.GetUInt32(4);
-                    byte[] rawData;
-                    rawData = new byte[size];
-                    rdr.GetBytes(2, 0, rawData, 0, (int)size);
-                    movieImage = byteArrayToImage(rawData);
-                }
+                movieTitle = rdr.GetString(1);
+                moviePrice = rdr.GetDecimal(3);
+                UInt32 size = rdr.GetUInt32(4);
+                byte[] rawData;
+                rawData = new byte[size];
+                rdr.GetBytes(2, 0, rawData, 0, (int)size);
+                movieImage = byteArrayToImage(rawData);
             }
-            catch (MySqlException ex)
+            if (cnn != null)
+                cnn.Close();
+            // count number of scheds
+            cnn.Open();
+            int index;
+            MySqlCommand cmd1 = new MySqlCommand("SELECT COUNT(*) FROM screening s LEFT JOIN ms_mapping m ON s.screening_id = m.screening_id WHERE  movies_id = '" + movieID + "'", cnn);
+            index = Convert.ToInt32(cmd1.ExecuteScalar());
+            if (cnn != null)
+                cnn.Close();
+            // selecting the scheds
+            query = String.Format("SELECT screening_sched FROM screening s LEFT JOIN ms_mapping m ON s.screening_id = m.screening_id WHERE  movies_id = '{0}'", movieID);
+            cnn.Open();
+            cmd.Connection = cnn;
+            cmd.CommandText = query;
+            rdr = cmd.ExecuteReader();
+            movieSched = new string[index];
+            int i = 0;
+            while (rdr.Read())
             {
-                MessageBox.Show("Select Failed");
+                movieSched[i++] = rdr.GetString(0);
             }
-            finally
-            {
-                if (cnn != null)
-                    cnn.Close();
-            }
+            if (cnn != null)
+                cnn.Close();
+            
+        }
+        public string[] GetMovieSched()
+        {
+            return movieSched;
         }
         public Image byteArrayToImage(byte[] byteArrayIn)
         {
