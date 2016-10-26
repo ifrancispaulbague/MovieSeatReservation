@@ -93,7 +93,7 @@ namespace TicketReservation
 
             price = double.Parse(movies.price);
             totalSeatCount = Int32.Parse(movies.seat);
-
+            seatCount(count, totalPrice);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -102,7 +102,8 @@ namespace TicketReservation
             foreach (Control crtl in this.Controls)
             {
                 if (crtl is CheckBox)
-                    if (((CheckBox)crtl).Checked == true) ((CheckBox)crtl).Checked = false;
+                    if (((CheckBox)crtl).Checked == true && ((CheckBox)crtl).Enabled==true)
+                        ((CheckBox)crtl).Checked = false;
             }
         }
 
@@ -474,6 +475,7 @@ namespace TicketReservation
                 systemDB.InsertSeat("E10", movies.mappingID);
                 checkBox50.Enabled = false;
             }
+            MessageBox.Show("Transaction Successful!!!");
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
