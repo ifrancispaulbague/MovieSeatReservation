@@ -473,6 +473,7 @@
             this.checkBox13.Text = "B3";
             this.checkBox13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox13.UseVisualStyleBackColor = true;
+            this.checkBox13.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged);
             // 
             // checkBox14
             // 
@@ -483,6 +484,7 @@
             this.checkBox14.Text = "B4";
             this.checkBox14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
             // 
             // checkBox15
             // 
@@ -493,6 +495,7 @@
             this.checkBox15.Text = "B5";
             this.checkBox15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox15.UseVisualStyleBackColor = true;
+            this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
             // 
             // checkBox16
             // 
@@ -503,6 +506,7 @@
             this.checkBox16.Text = "B6";
             this.checkBox16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox16.UseVisualStyleBackColor = true;
+            this.checkBox16.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
             // 
             // checkBox17
             // 
@@ -513,6 +517,7 @@
             this.checkBox17.Text = "B7";
             this.checkBox17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox17.UseVisualStyleBackColor = true;
+            this.checkBox17.CheckedChanged += new System.EventHandler(this.checkBox17_CheckedChanged);
             // 
             // checkBox18
             // 
@@ -523,6 +528,7 @@
             this.checkBox18.Text = "B8";
             this.checkBox18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox18.UseVisualStyleBackColor = true;
+            this.checkBox18.CheckedChanged += new System.EventHandler(this.checkBox18_CheckedChanged);
             // 
             // checkBox19
             // 
@@ -533,6 +539,7 @@
             this.checkBox19.Text = "B9";
             this.checkBox19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox19.UseVisualStyleBackColor = true;
+            this.checkBox19.CheckedChanged += new System.EventHandler(this.checkBox19_CheckedChanged);
             // 
             // checkBox20
             // 
@@ -543,6 +550,7 @@
             this.checkBox20.Text = "B10";
             this.checkBox20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox20.UseVisualStyleBackColor = true;
+            this.checkBox20.CheckedChanged += new System.EventHandler(this.checkBox20_CheckedChanged);
             // 
             // checkBox21
             // 
@@ -553,6 +561,7 @@
             this.checkBox21.Text = "C1";
             this.checkBox21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox21.UseVisualStyleBackColor = true;
+            this.checkBox21.CheckedChanged += new System.EventHandler(this.checkBox21_CheckedChanged);
             // 
             // checkBox22
             // 
@@ -563,6 +572,7 @@
             this.checkBox22.Text = "C2";
             this.checkBox22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox22.UseVisualStyleBackColor = true;
+            this.checkBox22.CheckedChanged += new System.EventHandler(this.checkBox22_CheckedChanged);
             // 
             // checkBox23
             // 
@@ -573,6 +583,7 @@
             this.checkBox23.Text = "C3";
             this.checkBox23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox23.UseVisualStyleBackColor = true;
+            this.checkBox23.CheckedChanged += new System.EventHandler(this.checkBox23_CheckedChanged);
             // 
             // checkBox24
             // 
@@ -583,6 +594,7 @@
             this.checkBox24.Text = "C4";
             this.checkBox24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox24.UseVisualStyleBackColor = true;
+            this.checkBox24.CheckedChanged += new System.EventHandler(this.checkBox24_CheckedChanged);
             // 
             // checkBox25
             // 
@@ -593,6 +605,7 @@
             this.checkBox25.Text = "C5";
             this.checkBox25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox25.UseVisualStyleBackColor = true;
+            this.checkBox25.CheckedChanged += new System.EventHandler(this.checkBox25_CheckedChanged);
             // 
             // checkBox26
             // 
@@ -603,6 +616,7 @@
             this.checkBox26.Text = "C6";
             this.checkBox26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox26.UseVisualStyleBackColor = true;
+            this.checkBox26.CheckedChanged += new System.EventHandler(this.checkBox26_CheckedChanged);
             // 
             // checkBox27
             // 
@@ -613,6 +627,7 @@
             this.checkBox27.Text = "C7";
             this.checkBox27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox27.UseVisualStyleBackColor = true;
+            this.checkBox27.CheckedChanged += new System.EventHandler(this.checkBox27_CheckedChanged);
             // 
             // checkBox28
             // 
@@ -623,6 +638,7 @@
             this.checkBox28.Text = "C8";
             this.checkBox28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox28.UseVisualStyleBackColor = true;
+            this.checkBox28.CheckedChanged += new System.EventHandler(this.checkBox28_CheckedChanged);
             // 
             // checkBox29
             // 
@@ -633,6 +649,7 @@
             this.checkBox29.Text = "C9";
             this.checkBox29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox29.UseVisualStyleBackColor = true;
+            this.checkBox29.CheckedChanged += new System.EventHandler(this.checkBox29_CheckedChanged);
             // 
             // checkBox30
             // 
@@ -643,6 +660,7 @@
             this.checkBox30.Text = "C10";
             this.checkBox30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox30.UseVisualStyleBackColor = true;
+            this.checkBox30.CheckedChanged += new System.EventHandler(this.checkBox30_CheckedChanged);
             // 
             // checkBox31
             // 
@@ -653,6 +671,7 @@
             this.checkBox31.Text = "D1";
             this.checkBox31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox31.UseVisualStyleBackColor = true;
+            this.checkBox31.CheckedChanged += new System.EventHandler(this.checkBox31_CheckedChanged);
             // 
             // checkBox32
             // 
@@ -663,6 +682,7 @@
             this.checkBox32.Text = "D2";
             this.checkBox32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox32.UseVisualStyleBackColor = true;
+            this.checkBox32.CheckedChanged += new System.EventHandler(this.checkBox32_CheckedChanged);
             // 
             // checkBox33
             // 
@@ -673,6 +693,7 @@
             this.checkBox33.Text = "D3";
             this.checkBox33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox33.UseVisualStyleBackColor = true;
+            this.checkBox33.CheckedChanged += new System.EventHandler(this.checkBox33_CheckedChanged);
             // 
             // checkBox34
             // 
@@ -683,6 +704,7 @@
             this.checkBox34.Text = "D4";
             this.checkBox34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox34.UseVisualStyleBackColor = true;
+            this.checkBox34.CheckedChanged += new System.EventHandler(this.checkBox34_CheckedChanged);
             // 
             // checkBox35
             // 
@@ -693,6 +715,7 @@
             this.checkBox35.Text = "D5";
             this.checkBox35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox35.UseVisualStyleBackColor = true;
+            this.checkBox35.CheckedChanged += new System.EventHandler(this.checkBox35_CheckedChanged);
             // 
             // checkBox36
             // 
@@ -703,6 +726,7 @@
             this.checkBox36.Text = "D6";
             this.checkBox36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox36.UseVisualStyleBackColor = true;
+            this.checkBox36.CheckedChanged += new System.EventHandler(this.checkBox36_CheckedChanged);
             // 
             // checkBox37
             // 
@@ -713,6 +737,7 @@
             this.checkBox37.Text = "D7";
             this.checkBox37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox37.UseVisualStyleBackColor = true;
+            this.checkBox37.CheckedChanged += new System.EventHandler(this.checkBox37_CheckedChanged);
             // 
             // checkBox38
             // 
@@ -723,6 +748,7 @@
             this.checkBox38.Text = "D8";
             this.checkBox38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox38.UseVisualStyleBackColor = true;
+            this.checkBox38.CheckedChanged += new System.EventHandler(this.checkBox38_CheckedChanged);
             // 
             // checkBox39
             // 
@@ -733,6 +759,7 @@
             this.checkBox39.Text = "D9";
             this.checkBox39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox39.UseVisualStyleBackColor = true;
+            this.checkBox39.CheckedChanged += new System.EventHandler(this.checkBox39_CheckedChanged);
             // 
             // checkBox41
             // 
@@ -743,6 +770,7 @@
             this.checkBox41.Text = "E1";
             this.checkBox41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox41.UseVisualStyleBackColor = true;
+            this.checkBox41.CheckedChanged += new System.EventHandler(this.checkBox41_CheckedChanged);
             // 
             // checkBox42
             // 
@@ -753,6 +781,7 @@
             this.checkBox42.Text = "E2";
             this.checkBox42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox42.UseVisualStyleBackColor = true;
+            this.checkBox42.CheckedChanged += new System.EventHandler(this.checkBox42_CheckedChanged);
             // 
             // checkBox43
             // 
@@ -763,6 +792,7 @@
             this.checkBox43.Text = "E3";
             this.checkBox43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox43.UseVisualStyleBackColor = true;
+            this.checkBox43.CheckedChanged += new System.EventHandler(this.checkBox43_CheckedChanged);
             // 
             // checkBox44
             // 
@@ -773,6 +803,7 @@
             this.checkBox44.Text = "E4";
             this.checkBox44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox44.UseVisualStyleBackColor = true;
+            this.checkBox44.CheckedChanged += new System.EventHandler(this.checkBox44_CheckedChanged);
             // 
             // checkBox45
             // 
@@ -783,6 +814,7 @@
             this.checkBox45.Text = "E5";
             this.checkBox45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox45.UseVisualStyleBackColor = true;
+            this.checkBox45.CheckedChanged += new System.EventHandler(this.checkBox45_CheckedChanged);
             // 
             // checkBox46
             // 
@@ -793,6 +825,7 @@
             this.checkBox46.Text = "E6";
             this.checkBox46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox46.UseVisualStyleBackColor = true;
+            this.checkBox46.CheckedChanged += new System.EventHandler(this.checkBox46_CheckedChanged);
             // 
             // checkBox47
             // 
@@ -803,6 +836,7 @@
             this.checkBox47.Text = "E7";
             this.checkBox47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox47.UseVisualStyleBackColor = true;
+            this.checkBox47.CheckedChanged += new System.EventHandler(this.checkBox47_CheckedChanged);
             // 
             // checkBox48
             // 
@@ -813,6 +847,7 @@
             this.checkBox48.Text = "E8";
             this.checkBox48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox48.UseVisualStyleBackColor = true;
+            this.checkBox48.CheckedChanged += new System.EventHandler(this.checkBox48_CheckedChanged);
             // 
             // checkBox49
             // 
@@ -823,6 +858,7 @@
             this.checkBox49.Text = "E9";
             this.checkBox49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox49.UseVisualStyleBackColor = true;
+            this.checkBox49.CheckedChanged += new System.EventHandler(this.checkBox49_CheckedChanged);
             // 
             // checkBox50
             // 
@@ -833,6 +869,7 @@
             this.checkBox50.Text = "E10";
             this.checkBox50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox50.UseVisualStyleBackColor = true;
+            this.checkBox50.CheckedChanged += new System.EventHandler(this.checkBox50_CheckedChanged);
             // 
             // checkBox40
             // 
@@ -843,6 +880,7 @@
             this.checkBox40.Text = "D10";
             this.checkBox40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox40.UseVisualStyleBackColor = true;
+            this.checkBox40.CheckedChanged += new System.EventHandler(this.checkBox40_CheckedChanged);
             // 
             // reservations
             // 
