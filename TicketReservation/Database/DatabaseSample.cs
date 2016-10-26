@@ -39,8 +39,8 @@ namespace TicketReservation
             }
             finally
             {
-            //    if(cnn!=null)
-                 //   cnn.Close();
+                if(cnn!=null)
+                    cnn.Close();
             }
         }
         public void SetSqlQuery(string query)
@@ -59,7 +59,7 @@ namespace TicketReservation
         }
         public void SelectMovieTitle(string movieID)
         {
-            //cnn.Open();
+            cnn.Open();
             string query = String.Format("SELECT * FROM movies WHERE movies_id = '{0}'", movieID);
             cmd.Connection = cnn;
             cmd.CommandText = query;
@@ -80,6 +80,11 @@ namespace TicketReservation
             catch (MySqlException ex)
             {
                 MessageBox.Show("Select Failed");
+            }
+            finally
+            {
+                if (cnn != null)
+                    cnn.Close();
             }
         }
         public Image byteArrayToImage(byte[] byteArrayIn)

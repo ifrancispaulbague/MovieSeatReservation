@@ -13,13 +13,15 @@ namespace TicketReservation
     public partial class screen : Form
     {
         public static string price = "", time = "", title = "", cinema = "", seat = "";
-        string[] cinemaMovieID = { "C10001", "", "" };
+        string[] cinemaMovieID = { "C10001", "C20001", "C30001" };
         DatabaseSample systemDB;
         public screen()
         {
             InitializeComponent();
             systemDB = new DatabaseSample();
             SetMovie1();
+            SetMovie2();
+            SetMovie3();
         }
         public void SetMovie1()
         {
@@ -28,6 +30,22 @@ namespace TicketReservation
             label7.Text = systemDB.GetMovieTitle();
             button1.Image = systemDB.GetMovieImage();
             
+        }
+        public void SetMovie2()
+        {
+            systemDB.SelectMovieTitle(cinemaMovieID[1]);
+            label17.Text = systemDB.GetMoviePrice().ToString();
+            label19.Text = systemDB.GetMovieTitle();
+            button2.Image = systemDB.GetMovieImage();
+
+        }
+        public void SetMovie3()
+        {
+            systemDB.SelectMovieTitle(cinemaMovieID[2]);
+            label11.Text = systemDB.GetMoviePrice().ToString();
+            label9.Text = systemDB.GetMovieTitle();
+            button3.Image = systemDB.GetMovieImage();
+
         }
         private void screen_Load(object sender, EventArgs e)
         {
@@ -52,7 +70,7 @@ namespace TicketReservation
         {
             price   = label17.Text;
             time    = label18.Text;
-            title   = label9.Text;
+            title   = label19.Text;
             cinema  = label20.Text;
             seat    = label27.Text;
 

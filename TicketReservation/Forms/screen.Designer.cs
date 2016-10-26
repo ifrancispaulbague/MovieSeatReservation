@@ -32,6 +32,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -41,6 +43,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -50,6 +54,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -58,12 +64,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -117,6 +117,24 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(76, 124);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(19, 13);
+            this.label25.TabIndex = 18;
+            this.label25.Text = "25";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(6, 124);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(60, 13);
+            this.label26.TabIndex = 17;
+            this.label26.Text = "Seat Count";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -151,7 +169,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(13, 13);
             this.label8.TabIndex = 14;
-            this.label8.Text = "3";
+            this.label8.Text = "1";
             // 
             // label3
             // 
@@ -207,6 +225,24 @@
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(76, 124);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(19, 13);
+            this.label29.TabIndex = 22;
+            this.label29.Text = "25";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 124);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(60, 13);
+            this.label30.TabIndex = 21;
+            this.label30.Text = "Seat Count";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -241,7 +277,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(13, 13);
             this.label12.TabIndex = 14;
-            this.label12.Text = "1";
+            this.label12.Text = "3";
             // 
             // label13
             // 
@@ -296,6 +332,24 @@
             this.groupBox3.Size = new System.Drawing.Size(257, 164);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(76, 123);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(19, 13);
+            this.label27.TabIndex = 20;
+            this.label27.Text = "25";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(6, 123);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(60, 13);
+            this.label28.TabIndex = 19;
+            this.label28.Text = "Seat Count";
             // 
             // label17
             // 
@@ -368,60 +422,6 @@
             this.label24.Size = new System.Drawing.Size(42, 13);
             this.label24.TabIndex = 5;
             this.label24.Text = "Cinema";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(76, 124);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(19, 13);
-            this.label25.TabIndex = 18;
-            this.label25.Text = "25";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 124);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(60, 13);
-            this.label26.TabIndex = 17;
-            this.label26.Text = "Seat Count";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(76, 123);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(19, 13);
-            this.label27.TabIndex = 20;
-            this.label27.Text = "25";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 123);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(60, 13);
-            this.label28.TabIndex = 19;
-            this.label28.Text = "Seat Count";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(76, 124);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(19, 13);
-            this.label29.TabIndex = 22;
-            this.label29.Text = "25";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 124);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(60, 13);
-            this.label30.TabIndex = 21;
-            this.label30.Text = "Seat Count";
             // 
             // screen
             // 
