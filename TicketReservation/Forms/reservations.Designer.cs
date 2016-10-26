@@ -102,6 +102,7 @@
             this.checkBox49 = new System.Windows.Forms.CheckBox();
             this.checkBox50 = new System.Windows.Forms.CheckBox();
             this.checkBox40 = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -109,9 +110,9 @@
             // btnCancel
             // 
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCancel.Location = new System.Drawing.Point(641, 285);
+            this.btnCancel.Location = new System.Drawing.Point(641, 325);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(122, 37);
+            this.btnCancel.Size = new System.Drawing.Size(166, 37);
             this.btnCancel.TabIndex = 0;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -195,9 +196,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lblTitle);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(641, 12);
+            this.groupBox1.Location = new System.Drawing.Point(641, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(290, 140);
+            this.groupBox1.Size = new System.Drawing.Size(290, 164);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
@@ -313,9 +314,9 @@
             // btnReserve
             // 
             this.btnReserve.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnReserve.Location = new System.Drawing.Point(809, 285);
+            this.btnReserve.Location = new System.Drawing.Point(900, 325);
             this.btnReserve.Name = "btnReserve";
-            this.btnReserve.Size = new System.Drawing.Size(122, 37);
+            this.btnReserve.Size = new System.Drawing.Size(166, 37);
             this.btnReserve.TabIndex = 18;
             this.btnReserve.Text = "Submit";
             this.btnReserve.UseVisualStyleBackColor = true;
@@ -432,9 +433,9 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.tboxPayAmount);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(641, 158);
+            this.groupBox2.Location = new System.Drawing.Point(641, 198);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(290, 121);
+            this.groupBox2.Size = new System.Drawing.Size(421, 121);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Payment";
@@ -882,11 +883,21 @@
             this.checkBox40.UseVisualStyleBackColor = true;
             this.checkBox40.CheckedChanged += new System.EventHandler(this.checkBox40_CheckedChanged);
             // 
+            // button1
+            // 
+            this.button1.Image = global::TicketReservation.Properties.Resources.rsz_1rsz_1rsz_1rsz_1rsz_1mr_robot_ver7_xlg;
+            this.button1.Location = new System.Drawing.Point(937, 28);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 164);
+            this.button1.TabIndex = 62;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // reservations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 569);
+            this.ClientSize = new System.Drawing.Size(1099, 569);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox48);
             this.Controls.Add(this.checkBox49);
             this.Controls.Add(this.checkBox50);
@@ -1032,5 +1043,6 @@
         private System.Windows.Forms.CheckBox checkBox49;
         private System.Windows.Forms.CheckBox checkBox50;
         private System.Windows.Forms.CheckBox checkBox40;
+        private System.Windows.Forms.Button button1;
     }
 }

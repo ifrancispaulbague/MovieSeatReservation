@@ -75,7 +75,9 @@ namespace TicketReservation
             checkBox48.Appearance = System.Windows.Forms.Appearance.Button;
             checkBox49.Appearance = System.Windows.Forms.Appearance.Button;
             checkBox50.Appearance = System.Windows.Forms.Appearance.Button;
-
+            systemDB.SelectMovieTitle(movies.cinemaMovieID[movies.cmID]);
+            button1.Image = systemDB.GetMovieImage();
+            button1.Enabled = true;
             //
             CheckReserved();
 

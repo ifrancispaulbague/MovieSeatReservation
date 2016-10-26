@@ -118,7 +118,7 @@ namespace TicketReservation
         public void CheckReservation(int mappingID)
         {
             string query = String.Format("SELECT * FROM reservations WHERE r_mapping_id = '{0}'", mappingID);
-            cnn.Open();
+            cnn.Open(); 
             int index;
             MySqlCommand cmd1 = new MySqlCommand(query, cnn);
             index = Convert.ToInt32(cmd1.ExecuteScalar());
@@ -128,6 +128,7 @@ namespace TicketReservation
             if (index != 0)
             {
                 //****start selecting******//
+
                 cnn.Open();
                 cmd.Connection = cnn;
                 cmd.CommandText = query;
@@ -139,6 +140,8 @@ namespace TicketReservation
                 {
                     seatID[i] = rdr.GetString(1);
                     seatStatus[i++] = rdr.GetBoolean(2);
+                    if (i == index)
+                        break;
 
                 }
                 if (cnn != null)
