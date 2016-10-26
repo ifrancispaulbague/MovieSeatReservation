@@ -13,8 +13,9 @@ namespace TicketReservation
     public partial class movies : Form
     {
         public static string price = "", time = "", title = "", cinema = "", seat = "";
-        public static int mappingID;
-        string[] cinemaMovieID = { "C10001", "C20001", "C30001" };
+        public static int mappingID, cmID;
+        public static string[] cinemaMovieID = { "C10001", "C20001", "C30001" };
+       
         DatabaseSample systemDB;
         public movies()
         {
@@ -70,6 +71,7 @@ namespace TicketReservation
             title   = label7.Text;
             cinema  = label8.Text;
             seat    = label25.Text;
+            cmID    = 0;
             mappingID = systemDB.SetMappingID(cinemaMovieID[0], time);
             this.Hide();
             reservations frm2 = new reservations();
@@ -83,6 +85,7 @@ namespace TicketReservation
             title   = label19.Text;
             cinema  = label20.Text;
             seat    = label27.Text;
+            cmID    = 1;
             mappingID = systemDB.SetMappingID(cinemaMovieID[1], time);
             this.Hide();
             reservations frm2 = new reservations();
@@ -96,6 +99,7 @@ namespace TicketReservation
             title   = label1.Text;
             cinema  = label12.Text;
             seat    = label29.Text;
+            cmID    = 2;
             mappingID = systemDB.SetMappingID(cinemaMovieID[2], time);
             this.Hide();
             reservations frm2 = new reservations();

@@ -141,7 +141,7 @@
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(19, 13);
             this.label25.TabIndex = 18;
-            this.label25.Text = "25";
+            this.label25.Text = "50";
             // 
             // label26
             // 
@@ -262,7 +262,7 @@
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(19, 13);
             this.label29.TabIndex = 22;
-            this.label29.Text = "25";
+            this.label29.Text = "50";
             // 
             // label30
             // 
@@ -383,7 +383,7 @@
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(19, 13);
             this.label27.TabIndex = 20;
-            this.label27.Text = "25";
+            this.label27.Text = "50";
             // 
             // label28
             // 

@@ -117,8 +117,8 @@ namespace TicketReservation
         }
         public void CheckReservation(int mappingID)
         {
-            string query = String.Format("SELECT * FROM reservations WHERE mapping_id = '{0}'", mappingID);
-            cnn.Open();
+            string query = String.Format("SELECT * FROM reservations WHERE r_mapping_id = '{0}'", mappingID);
+            cnn.Open(); 
             int index;
             MySqlCommand cmd1 = new MySqlCommand(query, cnn);
             index = Convert.ToInt32(cmd1.ExecuteScalar());
@@ -128,6 +128,7 @@ namespace TicketReservation
             if (index != 0)
             {
                 //****start selecting******//
+
                 cnn.Open();
                 cmd.Connection = cnn;
                 cmd.CommandText = query;
@@ -139,6 +140,8 @@ namespace TicketReservation
                 {
                     seatID[i] = rdr.GetString(1);
                     seatStatus[i++] = rdr.GetBoolean(2);
+                    if (i == index)
+                        break;
 
                 }
                 if (cnn != null)
@@ -148,7 +151,7 @@ namespace TicketReservation
         public void InsertSeat(string seatID, int mappingID)
         {
             cnn.Open();
-            string query = String.Format("INSERT INTO reservations (seat_id, reservation_status, mapping_id) VALUES ('{0}', '1', '{1}')", seatID, mappingID);
+            string query = String.Format("INSERT INTO reservations (seat_id, reservation_status, r_mapping_id) VALUES ('{0}', '1', '{1}')", seatID, mappingID);
             cmd.Connection = cnn;
             cmd.CommandText = query;
             cmd.ExecuteNonQuery();
