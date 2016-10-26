@@ -42,5 +42,5 @@ C:\Users\Jan\Documents\Git\MovieSeatReservation\TicketReservation\obj\Debug\Tick
 C:\Users\Jan\Documents\Git\MovieSeatReservation\TicketReservation\obj\Debug\TicketReservation.login.resources
 C:\Users\Jan\Documents\Git\MovieSeatReservation\TicketReservation\obj\Debug\TicketReservation.movies.resources
 C:\Users\Jan\Documents\Git\MovieSeatReservation\TicketReservation\obj\Debug\TicketReservation.Properties.Resources.resources
-C:\Users\Jan\Documents\Git\MovieSeatReservation\TicketReservation\obj\Debug\TicketReservation.screen.resources
 C:\Users\Jan\Documents\Git\MovieSeatReservation\TicketReservation\obj\Debug\TicketReservation.csproj.GenerateResource.Cache
+C:\Users\Jan\Documents\Git\MovieSeatReservation\TicketReservation\obj\Debug\TicketReservation.reservations.resources

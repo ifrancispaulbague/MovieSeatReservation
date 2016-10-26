@@ -54,13 +54,15 @@ DROP TABLE IF EXISTS `ms_mapping`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ms_mapping` (
+  `mapping_id` int(11) NOT NULL AUTO_INCREMENT,
   `movies_id` varchar(11) NOT NULL,
   `screening_id` int(11) NOT NULL,
-  PRIMARY KEY (`movies_id`,`screening_id`),
+  PRIMARY KEY (`mapping_id`,`movies_id`,`screening_id`),
+  KEY `movies_id_idx` (`movies_id`),
   KEY `screening_id_idx` (`screening_id`),
   CONSTRAINT `movies_id` FOREIGN KEY (`movies_id`) REFERENCES `movies` (`movies_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `screening_id` FOREIGN KEY (`screening_id`) REFERENCES `screening` (`screening_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,8 +71,36 @@ CREATE TABLE `ms_mapping` (
 
 LOCK TABLES `ms_mapping` WRITE;
 /*!40000 ALTER TABLE `ms_mapping` DISABLE KEYS */;
-INSERT INTO `ms_mapping` VALUES ('C10001',1),('C30001',1),('C10001',2),('C20001',2);
+INSERT INTO `ms_mapping` VALUES (1,'C10001',1),(4,'C30001',1),(2,'C10001',2),(3,'C20001',2);
 /*!40000 ALTER TABLE `ms_mapping` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `reservations`
+--
+
+DROP TABLE IF EXISTS `reservations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `reservations` (
+  `reservation_id` int(11) NOT NULL AUTO_INCREMENT,
+  `seat_id` varchar(3) NOT NULL,
+  `reservation_status` tinyint(4) DEFAULT NULL,
+  `mapping_id` int(11) NOT NULL,
+  PRIMARY KEY (`reservation_id`,`seat_id`,`mapping_id`),
+  KEY `mapping_id_idx` (`mapping_id`),
+  CONSTRAINT `mapping_id` FOREIGN KEY (`mapping_id`) REFERENCES `ms_mapping` (`mapping_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `reservations`
+--
+
+LOCK TABLES `reservations` WRITE;
+/*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
+INSERT INTO `reservations` VALUES (3,'A1',1,3);
+/*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -107,4 +137,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-26 11:59:18
+-- Dump completed on 2016-10-26 16:39:29
