@@ -74,8 +74,8 @@ namespace TicketReservation
             cmID    = 0;
             mappingID = systemDB.SetMappingID(cinemaMovieID[0], time);
             this.Hide();
-            reservations frm2 = new reservations();
-            frm2.Show(); 
+            Program.formReservations = new reservations();
+            Program.formReservations.Show(); 
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -88,8 +88,8 @@ namespace TicketReservation
             cmID    = 1;
             mappingID = systemDB.SetMappingID(cinemaMovieID[1], time);
             this.Hide();
-            reservations frm2 = new reservations();
-            frm2.Show(); 
+            Program.formReservations = new reservations();
+            Program.formReservations.Show(); 
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -102,8 +102,8 @@ namespace TicketReservation
             cmID    = 2;
             mappingID = systemDB.SetMappingID(cinemaMovieID[2], time);
             this.Hide();
-            reservations frm2 = new reservations();
-            frm2.Show(); 
+            Program.formReservations = new reservations();
+            Program.formReservations.Show(); 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,6 +119,11 @@ namespace TicketReservation
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             time = comboBox3.SelectedItem.ToString();
+        }
+
+        private void movies_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.formHome.Show();
         }
     }
 }
