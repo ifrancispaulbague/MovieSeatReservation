@@ -958,6 +958,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "reservations";
             this.Text = "Reservations";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.reservations_FormClosed);
             this.Load += new System.EventHandler(this.reservations_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

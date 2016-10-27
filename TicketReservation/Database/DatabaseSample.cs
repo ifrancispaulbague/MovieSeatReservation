@@ -45,6 +45,7 @@ namespace TicketReservation
                     cnn.Close();
             }
         }
+        
         //public void SetSqlQuery(string query)
         //{
         //    cmd = new MySqlCommand();
@@ -146,15 +147,17 @@ namespace TicketReservation
             {
                 mappingID = rdr.GetInt16(0);
             }
+            cnn.Close();
             return mappingID;
 
         }
         public void CheckReservation(int mappingID)
         {
             string query = String.Format("SELECT * FROM reservations WHERE r_mapping_id = '{0}'", mappingID);
+            string query1 = String.Format("SELECT COUNT(*) FROM reservations WHERE r_mapping_id = '{0}'", mappingID);
             cnn.Open(); 
             int index;
-            MySqlCommand cmd1 = new MySqlCommand(query, cnn);
+            MySqlCommand cmd1 = new MySqlCommand(query1, cnn);
             index = Convert.ToInt32(cmd1.ExecuteScalar());
             if (cnn != null)
                 cnn.Close();
@@ -172,8 +175,8 @@ namespace TicketReservation
                 int i = 0;
                 while (rdr.Read())
                 {
-                    seatID[i] = rdr.GetString(1);
-                    seatStatus[i++] = rdr.GetBoolean(2);
+                    seatID[i] = rdr.GetString(0);
+                    seatStatus[i++] = rdr.GetBoolean(1);
                     if (i == index)
                         break;
 
@@ -184,6 +187,7 @@ namespace TicketReservation
         }
         public void InsertSeat(string seatID, int mappingID)
         {
+            
             cnn.Open();
             string query = String.Format("INSERT INTO reservations (seat_id, reservation_status, r_mapping_id) VALUES ('{0}', '1', '{1}')", seatID, mappingID);
             cmd.Connection = cnn;
@@ -220,6 +224,30 @@ namespace TicketReservation
         public bool[] GetSeatStatus()
         {
             return seatStatus;
+        }
+        public string GetSched(int mappingID)
+        {
+            cnn.Open();
+            string query = String.Format("SELECT screening_sched FROM screening s LEFT JOIN ms_mapping m ON s.screening_id = m.screening_id WHERE mapping_id = '{0}'", mappingID);
+            cmd.Connection = cnn;
+            cmd.CommandText = query;
+            string output = "";
+            rdr = cmd.ExecuteReader();
+            while(rdr.Read())
+            {
+                output = rdr.GetString(0);
+            }
+            cnn.Close();
+            return output;
+        }
+        public void InsertTransaction(decimal transactionAmount, int transactionSeats, int mappingID, string code)
+        {
+            cnn.Open();
+            string query = String.Format("INSERT INTO transaction (transaction_amount, transaction_seats, transaction_date, t_mapping_id, transaction_code) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')", transactionAmount, transactionSeats, System.DateTime.Now.ToString(), mappingID, code);
+            cmd.Connection = cnn;
+            cmd.CommandText = query;
+            cmd.ExecuteNonQuery();
+            cnn.Close();
         }
     }
 }

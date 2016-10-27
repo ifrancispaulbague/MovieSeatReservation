@@ -83,11 +83,10 @@ DROP TABLE IF EXISTS `reservations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `reservations` (
-  `reservation_id` int(11) NOT NULL AUTO_INCREMENT,
   `seat_id` varchar(3) NOT NULL,
   `reservation_status` tinyint(4) DEFAULT NULL,
   `r_mapping_id` int(11) NOT NULL,
-  PRIMARY KEY (`reservation_id`,`seat_id`,`r_mapping_id`),
+  PRIMARY KEY (`seat_id`,`r_mapping_id`),
   KEY `mapping_id_idx` (`r_mapping_id`),
   CONSTRAINT `r_mapping_id` FOREIGN KEY (`r_mapping_id`) REFERENCES `ms_mapping` (`mapping_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -138,13 +137,14 @@ CREATE TABLE `transaction` (
   `transaction_id` int(11) NOT NULL AUTO_INCREMENT,
   `transaction_amount` decimal(10,2) DEFAULT NULL,
   `transaction_seats` int(10) DEFAULT NULL,
-  `transaction_date` datetime DEFAULT NULL,
+  `transaction_date` varchar(45) DEFAULT NULL,
   `t_mapping_id` int(11) DEFAULT NULL,
+  `transaction_code` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`transaction_id`),
   KEY `mapping_id_idx` (`t_mapping_id`),
   KEY `t_mapping_id_idx` (`t_mapping_id`),
   CONSTRAINT `t_mapping_id` FOREIGN KEY (`t_mapping_id`) REFERENCES `ms_mapping` (`mapping_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -165,4 +165,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-26 21:36:58
+-- Dump completed on 2016-10-26 23:46:53
