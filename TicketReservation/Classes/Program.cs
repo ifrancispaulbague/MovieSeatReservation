@@ -21,6 +21,7 @@ namespace TicketReservation
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new admin());
             formHome = new index();
             Application.Run(formHome);
         }

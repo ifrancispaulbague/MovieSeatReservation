@@ -12,10 +12,11 @@ namespace TicketReservation
 {
     public partial class login : Form
     {
+        DatabaseSample systemDB;
         public login()
         {
             InitializeComponent();
-
+            systemDB = new DatabaseSample();
         }
 
         int ctr = 0;
@@ -28,7 +29,7 @@ namespace TicketReservation
             {
                 //MessageBox.Show("Welcome");
                 this.Hide();
-                var form = new movies();
+                var form = new admin();
                 form.Show();
             }
             else
