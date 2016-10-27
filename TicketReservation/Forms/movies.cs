@@ -12,7 +12,7 @@ namespace TicketReservation
 {
     public partial class movies : Form
     {
-        public static string price = "", time = "", title = "", cinema = "", seat = "";
+        public static string price = "0.00", time = "", title = "", cinema = "", seat = "";
         public static int mappingID, cmID;
         public static string[] cinemaMovieID = { "C10001", "C20001", "C30001" };
        
@@ -50,8 +50,8 @@ namespace TicketReservation
         public void SetMovie3()
         {
             systemDB.SelectMovieTitle(cinemaMovieID[2]);
-            label11.Text = systemDB.GetMoviePrice().ToString();
-            label9.Text = systemDB.GetMovieTitle();
+            label9.Text = systemDB.GetMoviePrice().ToString();
+            label11.Text = systemDB.GetMovieTitle();
             button3.Image = systemDB.GetMovieImage();
             comboBox3.Items.Clear();
             comboBox3.Items.AddRange(systemDB.GetMovieSched());
@@ -96,7 +96,7 @@ namespace TicketReservation
         {
             price   = label9.Text;
             time    = comboBox3.SelectedItem.ToString();
-            title   = label1.Text;
+            title   = label11.Text;
             cinema  = label12.Text;
             seat    = label29.Text;
             cmID    = 2;
