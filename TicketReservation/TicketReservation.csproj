@@ -183,6 +183,7 @@
   <ItemGroup>
     <Content Include="Database\systemdb.sql" />
     <Content Include="Database\systemdball.sql" />
+    <Content Include="Database\systemdbsemifinal.sql" />
     <Content Include="Database\systemdbstruct1.sql" />
     <Content Include="Resources\Untitled-1.jpg" />
   </ItemGroup>

@@ -57,3 +57,5 @@ C:\Users\Francis\Documents\SCHOOL FILES\git\PortableGit\MovieSeatReservation\Tic
 C:\Users\Francis\Documents\SCHOOL FILES\git\PortableGit\MovieSeatReservation\TicketReservation\obj\Debug\TicketReservation.exe
 C:\Users\Francis\Documents\SCHOOL FILES\git\PortableGit\MovieSeatReservation\TicketReservation\obj\Debug\TicketReservation.pdb
 C:\Users\Francis\Documents\SCHOOL FILES\git\PortableGit\MovieSeatReservation\TicketReservation\obj\Debug\TicketReservation.admin.resources
+C:\Users\Jan\Documents\Git\MovieSeatReservation\TicketReservation\obj\Debug\TicketReservation.csprojResolveAssemblyReference.cache
+C:\Users\Jan\Documents\Git\MovieSeatReservation\TicketReservation\obj\Debug\TicketReservation.admin.resources
