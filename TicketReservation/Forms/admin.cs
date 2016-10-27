@@ -27,9 +27,9 @@ namespace TicketReservation
             FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
             BinaryReader brs = new BinaryReader(Streem);
             images = brs.ReadBytes((int)Streem.Length);
-
+            
             string
-                movieID = tbxMovieId.Text,
+                movieID = (cmbCinameNo.Text).Substring(0,1) + tbxMovieId.Text,
                 movieTitle = tbxMovieTitle.Text,
                 screenTime = tbxScreenTime.Text;
 
@@ -58,6 +58,12 @@ namespace TicketReservation
                     ((TextBox)c).Text = String.Empty;
                 }
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.formHome.Show();
         }
     }
 }

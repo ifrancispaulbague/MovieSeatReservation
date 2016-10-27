@@ -39,12 +39,15 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.tbxScreenTime = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbCinameNo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(12, 180);
+            this.btnSubmit.Location = new System.Drawing.Point(13, 206);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 0;
@@ -54,7 +57,7 @@
             // 
             // tbxMovieId
             // 
-            this.tbxMovieId.Location = new System.Drawing.Point(118, 12);
+            this.tbxMovieId.Location = new System.Drawing.Point(119, 38);
             this.tbxMovieId.Name = "tbxMovieId";
             this.tbxMovieId.Size = new System.Drawing.Size(234, 20);
             this.tbxMovieId.TabIndex = 1;
@@ -62,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 15);
+            this.label1.Location = new System.Drawing.Point(16, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 2;
@@ -71,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 41);
+            this.label2.Location = new System.Drawing.Point(16, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 4;
@@ -79,7 +82,7 @@
             // 
             // tbxMovieTitle
             // 
-            this.tbxMovieTitle.Location = new System.Drawing.Point(118, 38);
+            this.tbxMovieTitle.Location = new System.Drawing.Point(119, 64);
             this.tbxMovieTitle.Name = "tbxMovieTitle";
             this.tbxMovieTitle.Size = new System.Drawing.Size(234, 20);
             this.tbxMovieTitle.TabIndex = 3;
@@ -87,7 +90,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 67);
+            this.label3.Location = new System.Drawing.Point(16, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 6;
@@ -95,7 +98,7 @@
             // 
             // tbxMoviePrice
             // 
-            this.tbxMoviePrice.Location = new System.Drawing.Point(118, 64);
+            this.tbxMoviePrice.Location = new System.Drawing.Point(119, 90);
             this.tbxMoviePrice.Name = "tbxMoviePrice";
             this.tbxMoviePrice.Size = new System.Drawing.Size(234, 20);
             this.tbxMoviePrice.TabIndex = 5;
@@ -106,7 +109,7 @@
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(118, 91);
+            this.btnUpload.Location = new System.Drawing.Point(119, 117);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(234, 23);
             this.btnUpload.TabIndex = 7;
@@ -116,7 +119,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(93, 180);
+            this.btnClear.Location = new System.Drawing.Point(94, 206);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 8;
@@ -127,24 +130,58 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 123);
+            this.label4.Location = new System.Drawing.Point(16, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Show Time";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(175, 206);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 11;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // tbxScreenTime
             // 
-            this.tbxScreenTime.Location = new System.Drawing.Point(118, 120);
+            this.tbxScreenTime.Location = new System.Drawing.Point(119, 146);
             this.tbxScreenTime.Name = "tbxScreenTime";
             this.tbxScreenTime.Size = new System.Drawing.Size(234, 20);
             this.tbxScreenTime.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Cinema";
+            // 
+            // cmbCinameNo
+            // 
+            this.cmbCinameNo.FormattingEnabled = true;
+            this.cmbCinameNo.Items.AddRange(new object[] {
+            "C1 - Cinema 1",
+            "C2 - Cinema 2",
+            "C3 - Cinema 3"});
+            this.cmbCinameNo.Location = new System.Drawing.Point(119, 11);
+            this.cmbCinameNo.Name = "cmbCinameNo";
+            this.cmbCinameNo.Size = new System.Drawing.Size(121, 21);
+            this.cmbCinameNo.TabIndex = 13;
             // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(459, 293);
+            this.Controls.Add(this.cmbCinameNo);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbxScreenTime);
             this.Controls.Add(this.btnClear);
@@ -176,6 +213,9 @@
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox tbxScreenTime;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbCinameNo;
     }
 }

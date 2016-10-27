@@ -29,7 +29,7 @@ namespace TicketReservation
             {
                 //MessageBox.Show("Welcome");
                 this.Hide();
-                var form = new movies();
+                var form = new admin();
                 form.Show();
             }
             else

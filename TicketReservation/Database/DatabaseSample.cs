@@ -65,24 +65,22 @@ namespace TicketReservation
         {
 
             cnn.Open();
-            string query = String.Format("INSERT INTO `systemdb`.`movies` (`movies_id`, `movies_title`, `movies_image`, `movies_price`, `image_size`, `cinema`) VALUES ('" + movieID + "', '" + movieTitle + "', '" + moviePrice + "', '" + images + "', '" + imageSize + "', '')");
+            string query = String.Format("INSERT INTO `systemdb`.`movies` (`movies_id`, `movies_title`, `movies_image`, `movies_price`, `image_size`, `cinema`) VALUES ('" + movieID + "', '" + movieTitle + "', '" + images + "', '" + moviePrice + "', '" + imageSize + "', '')");
             try
             {
                 cmd.Connection = cnn;
                 cmd.CommandText = query;
                 cmd.ExecuteNonQuery();
 
+                string query2 = String.Format("INSERT INTO `systemdb`.`screening` (`screening_ID`, `screening_sched`) VALUES ('','" + screenTime + "')");
+                cmd.CommandText = query2;
+                cmd.ExecuteNonQuery();
+
                 string query1 = String.Format("INSERT INTO `systemdb`.`ms_mapping` (`mapping_id`, `movies_id`, `screening_id`) VALUES ('', '" + movieID + "', '" + screenTime + "')");
-                cmd.Connection = cnn;
                 cmd.CommandText = query1;
                 cmd.ExecuteNonQuery();
 
-                /*
-                string query2 = String.Format("INSERT INTO `systemdb`.`screening` (`screening_ID`, `screening_sched`) VALUES ('" + movieID + "', '" + screenTime + "')");
-                cmd.Connection = cnn;
-                cmd.CommandText = query2;
-                cmd.ExecuteNonQuery();
-                */
+                
                 MessageBox.Show("Successfuly added Movie");
            
             }
