@@ -63,6 +63,7 @@ namespace TicketReservation
                     if (((CheckBox)crtl).Checked == true && ((CheckBox)crtl).Enabled==true)
                         ((CheckBox)crtl).Checked = false;
             }
+            this.Close();
         }
 
         public void seatCount(int count, double totalPrice)
