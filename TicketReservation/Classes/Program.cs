@@ -11,7 +11,7 @@ namespace TicketReservation
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        //public static index formHome;
+        public static index formHome;
         public static movies formMovies;
         public static reservations formReservations;
         public static login formLogin;
@@ -22,7 +22,8 @@ namespace TicketReservation
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new admin());
-            Application.Run(new index());
+            formHome = new index();
+            Application.Run(formHome);
         }
     }
 }
