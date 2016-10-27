@@ -38,9 +38,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnUpload = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.tbxScreenTime = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCinameNo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -127,15 +125,6 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 149);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Show Time";
-            // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(175, 206);
@@ -145,13 +134,6 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // tbxScreenTime
-            // 
-            this.tbxScreenTime.Location = new System.Drawing.Point(119, 146);
-            this.tbxScreenTime.Name = "tbxScreenTime";
-            this.tbxScreenTime.Size = new System.Drawing.Size(234, 20);
-            this.tbxScreenTime.TabIndex = 9;
             // 
             // label5
             // 
@@ -182,8 +164,6 @@
             this.Controls.Add(this.cmbCinameNo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.tbxScreenTime);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.label3);
@@ -212,9 +192,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox tbxScreenTime;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbCinameNo;
     }

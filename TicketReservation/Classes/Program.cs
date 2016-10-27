@@ -13,6 +13,10 @@ namespace TicketReservation
         /// </summary>
         public static index formHome;
         public static movies formMovies;
+        public static admin formAdmovie;
+        public static timeSlot formTimeSlot;
+        public static adminForm formAdmin;
+        public static update formUpdate;
         public static reservations formReservations;
         public static login formLogin;
         [STAThread]
@@ -24,6 +28,9 @@ namespace TicketReservation
             //Application.Run(new admin());
             formHome = new index();
             Application.Run(formHome);
+
+            formTimeSlot = new timeSlot();
+            formAdmin = new adminForm();
         }
     }
 }

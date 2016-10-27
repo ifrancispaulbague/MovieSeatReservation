@@ -21,7 +21,7 @@ namespace TicketReservation
         bool[] seatStatus;
         decimal moviePrice;
         Image movieImage;
-
+        public string[] mTitle, mSched;
 
         public DatabaseSample()
         {
@@ -61,17 +61,159 @@ namespace TicketReservation
         //    cmd.ExecuteNonQuery();
         //}
 
-        public void AddMovie(string movieID, string movieTitle, decimal moviePrice, byte[] images, string imageSize, string screenTime)
+        public void GetSchedule()
         {
 
+            // count number of scheds
             cnn.Open();
-            string query = String.Format("INSERT INTO `systemdb`.`movies` (`movies_id`, `movies_title`, `movies_image`, `movies_price`, `image_size`, `cinema`) VALUES ('" + movieID + "', '" + movieTitle + "', '" + images + "', '" + moviePrice + "', '" + imageSize + "', '')");
+            int index;
+            MySqlCommand cmd1 = new MySqlCommand("SELECT COUNT(*) FROM screening", cnn);
+            index = Convert.ToInt32(cmd1.ExecuteScalar());
+            if (cnn != null)
+                cnn.Close();
+
+            cnn.Open();
+
+            string query = String.Format("SELECT screening_sched FROM screening");
+            cmd.Connection = cnn;
+            cmd.CommandText = query;
+            mSched = new string[index];
+            int i = 0;
+            rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                mSched[i++] = rdr.GetString(0);
+                if (i == index)
+                    break;
+            }
+
+            cnn.Close();
+        }
+
+        public void InsertMapping(string movieId, string sid) 
+        {
+            cnn.Open();
+            string query = String.Format("INSERT INTO `systemdb`.`ms_mapping` (`movies_id`, `screening_id`) VALUES ('{0}', '{1}')", movieId, sid);
             try
             {
                 cmd.Connection = cnn;
                 cmd.CommandText = query;
                 cmd.ExecuteNonQuery();
 
+                MessageBox.Show("Successfuly added Time Slot");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            cnn.Close();
+        }
+
+        public string GetSID(string sched)
+        {
+
+            // count number of scheds
+            cnn.Open();
+            int index;
+            string query = string.Format("SELECT screening_id FROM screening WHERE screening_sched = '{0}'", sched);
+            MySqlCommand cmd1 = new MySqlCommand(query, cnn);
+            string ID = "";
+            rdr = cmd1.ExecuteReader();
+            while (rdr.Read())
+            {
+                ID = rdr.GetString(0);
+            }
+
+            cnn.Close();
+            return ID;
+        }
+
+        public string GetID(string mTitle)
+        {
+
+            // count number of scheds
+            cnn.Open();
+            int index;
+            string query = string.Format("SELECT movies_id FROM movies WHERE movies_title = '{0}'", mTitle);
+            MySqlCommand cmd1 = new MySqlCommand(query, cnn);
+            string ID = "";
+            rdr = cmd1.ExecuteReader();
+            while (rdr.Read())
+            {
+                ID = rdr.GetString(0);
+            }
+
+            cnn.Close();
+            return ID;
+        }
+
+        public void GetMovie()
+        {
+
+            // count number of scheds
+            cnn.Open();
+            int index;
+            MySqlCommand cmd1 = new MySqlCommand("SELECT COUNT(*) FROM movies", cnn);
+            index = Convert.ToInt32(cmd1.ExecuteScalar());
+            if (cnn != null)
+                cnn.Close();
+
+            cnn.Open();
+
+            string query = String.Format("SELECT movies_title FROM movies");
+            cmd.Connection = cnn;
+            cmd.CommandText = query;
+            mTitle = new string[index];
+            int i = 0;
+            rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                mTitle[i++] = rdr.GetString(0);
+                if (i == index)
+                    break;
+            }
+
+            cnn.Close();
+        }
+        public string[] GetMSched()
+        {
+            return mSched;
+        }
+
+        public string[] GetMTitle()
+        {
+            return mTitle;
+        }
+        public void AddScreenTime(string movieTime)
+        {
+            cnn.Open();
+            string query = String.Format("INSERT INTO `systemdb`.`screening` (`screening_ID`, `screening_sched`) VALUES ('','" + movieTime + "')");
+            try
+            {
+                cmd.Connection = cnn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Successfuly added Time Slot");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            cnn.Close();
+        }
+
+        public void AddMovie(string movieID, string movieTitle, decimal moviePrice, byte[] images, string imageSize, string movieCinema)
+        {
+
+            cnn.Open();
+            string query = String.Format("INSERT INTO `systemdb`.`movies` (`movies_id`, `movies_title`, `movies_image`, `movies_price`, `image_size`, `cinema`) VALUES ('" + movieID + "', '" + movieTitle + "', '" + images + "', '" + moviePrice + "', '" + imageSize + "', '" + movieCinema + "')");
+            try
+            {
+                cmd.Connection = cnn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                /*
                 string query2 = String.Format("INSERT INTO `systemdb`.`screening` (`screening_ID`, `screening_sched`) VALUES ('','" + screenTime + "')");
                 cmd.CommandText = query2;
                 cmd.ExecuteNonQuery();
@@ -79,8 +221,14 @@ namespace TicketReservation
                 string query1 = String.Format("INSERT INTO `systemdb`.`ms_mapping` (`mapping_id`, `movies_id`, `screening_id`) VALUES ('', '" + movieID + "', '" + screenTime + "')");
                 cmd.CommandText = query1;
                 cmd.ExecuteNonQuery();
+                */
+                if (movieCinema == "C1")
+                    movies.cinemaMovieID[0] = movieID;
+                else if (movieCinema == "C2")
+                    movies.cinemaMovieID[1] = movieID;
+                else 
+                    movies.cinemaMovieID[2] = movieID;
 
-                
                 MessageBox.Show("Successfuly added Movie");
            
             }

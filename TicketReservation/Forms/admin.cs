@@ -14,7 +14,7 @@ namespace TicketReservation
     public partial class admin : Form
     {
         DatabaseSample systemDB;
-        public string imgLocation = "", imageSize = "240";
+        public string imgLocation = "", imageSize = "140";
         public admin()
         {
             InitializeComponent();
@@ -27,15 +27,17 @@ namespace TicketReservation
             FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
             BinaryReader brs = new BinaryReader(Streem);
             images = brs.ReadBytes((int)Streem.Length);
-            
+
             string
-                movieID = (cmbCinameNo.Text).Substring(0,1) + tbxMovieId.Text,
+                movieID = (cmbCinameNo.Text).Substring(0, 2) + tbxMovieId.Text,
                 movieTitle = tbxMovieTitle.Text,
-                screenTime = tbxScreenTime.Text;
+                movieCinema = (cmbCinameNo.Text).Substring(1, 1);
 
             decimal moviePrice = decimal.Parse(tbxMoviePrice.Text);
 
-            systemDB.AddMovie(movieID, movieTitle, moviePrice, images, imageSize, screenTime);
+            systemDB.AddMovie(movieID, movieTitle, moviePrice, images, imageSize, movieCinema);
+            this.Close();
+            Program.formHome.Show();
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
@@ -44,8 +46,6 @@ namespace TicketReservation
             if (openFile == DialogResult.OK) 
             {
                 imgLocation = openFileDialog1.FileName.ToString();
-                MessageBox.Show(openFileDialog1.FileName);
-                
             }
         }
 
@@ -62,8 +62,8 @@ namespace TicketReservation
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Program.formHome.Show();
+            this.Close();
+            Program.formAdmin.Show();
         }
     }
 }

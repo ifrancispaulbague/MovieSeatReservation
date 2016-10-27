@@ -17,6 +17,7 @@ namespace TicketReservation
         {
             InitializeComponent();
             systemDB = new DatabaseSample();
+            
         }
 
         int ctr = 0;
@@ -29,8 +30,8 @@ namespace TicketReservation
             {
                 //MessageBox.Show("Welcome");
                 this.Hide();
-                var form = new admin();
-                form.Show();
+                Program.formAdmin = new adminForm();
+                Program.formAdmin.Show();
             }
             else
             {
