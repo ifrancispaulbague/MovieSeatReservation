@@ -25,8 +25,8 @@ namespace TicketReservation
 
         public DatabaseSample()
         {
-            //connectionString = "server=localhost;userid=root;password=1234;database=systemdb;";
-            connectionString = "server=192.168.205.137;userid=WUPOS;password=WUPOS;database=systemdb;";
+            connectionString = "server=localhost;userid=root;password=1234;database=systemdb;";
+            //connectionString = "server=192.168.205.137;userid=WUPOS;password=WUPOS;database=systemdb;";
             try
             {
                 cnn = new MySqlConnection(connectionString);
