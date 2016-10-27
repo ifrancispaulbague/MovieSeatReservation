@@ -25,7 +25,8 @@ namespace TicketReservation
 
         public DatabaseSample()
         {
-            connectionString = "server=localhost;userid=root;password=1234;database=systemdb;";
+            //connectionString = "server=localhost;userid=root;password=1234;database=systemdb;";
+            connectionString = "server=192.168.205.137;userid=WUPOS;password=WUPOS;database=systemdb;";
             try
             {
                 cnn = new MySqlConnection(connectionString);
@@ -58,6 +59,39 @@ namespace TicketReservation
         //{
         //    cmd.ExecuteNonQuery();
         //}
+
+        public void AddMovie(string movieID, string movieTitle, decimal moviePrice, byte[] images, string imageSize, string screenTime)
+        {
+
+            cnn.Open();
+            string query = String.Format("INSERT INTO `systemdb`.`movies` (`movies_id`, `movies_title`, `movies_image`, `movies_price`, `image_size`, `cinema`) VALUES ('" + movieID + "', '" + movieTitle + "', '" + moviePrice + "', '" + images + "', '" + imageSize + "', '')");
+            try
+            {
+                cmd.Connection = cnn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+
+                string query1 = String.Format("INSERT INTO `systemdb`.`ms_mapping` (`mapping_id`, `movies_id`, `screening_id`) VALUES ('', '" + movieID + "', '" + screenTime + "')");
+                cmd.Connection = cnn;
+                cmd.CommandText = query1;
+                cmd.ExecuteNonQuery();
+
+                /*
+                string query2 = String.Format("INSERT INTO `systemdb`.`screening` (`screening_ID`, `screening_sched`) VALUES ('" + movieID + "', '" + screenTime + "')");
+                cmd.Connection = cnn;
+                cmd.CommandText = query2;
+                cmd.ExecuteNonQuery();
+                */
+                MessageBox.Show("Successfuly added Movie");
+           
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            cnn.Close();
+        }
+
         public void SelectMovieTitle(string movieID)
         {
             cnn.Open();

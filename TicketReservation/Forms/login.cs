@@ -12,10 +12,11 @@ namespace TicketReservation
 {
     public partial class login : Form
     {
+        DatabaseSample systemDB;
         public login()
         {
             InitializeComponent();
-
+            systemDB = new DatabaseSample();
         }
 
         int ctr = 0;
